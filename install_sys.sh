@@ -37,7 +37,7 @@ dialog --no-cancel --inputbox  \
         20 60 2> swap_size
 
 size=$(cat swap_size) && rm swap_size
-[[ $size =~ ^[0-9]+$ ]] || $default_swap
+[[ $size =~ ^[0-9]+$ ]] || size=$default_swap
 
 dialog --no-cancel \
     --title "!!! DELETE EVERYTHING !!!" \
