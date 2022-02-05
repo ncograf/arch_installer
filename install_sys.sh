@@ -37,6 +37,7 @@ dialog --no-cancel --inputbox  \
         20 60 2> swap_size
 
 size=$(cat swap_size) && rm swap_size
+
 [[ $size =~ ^[0-9]+$ ]] || size=$default_swap
 
 dialog --no-cancel \
@@ -92,7 +93,7 @@ n
 
 +512M
 t
-$boot_parition_type
+$boot_partition_type
 n
 
 
@@ -103,6 +104,7 @@ n
 
 w
 EOF
+
 partprobe "$hd"
 
 # end of the necessary empty lines

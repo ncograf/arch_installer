@@ -41,7 +41,7 @@ function config_user(){
         echo "$1" > name
     fi
 
-    dialog --nocancel --passwordbox "Enter your password." \
+    dialog --no-cancel --passwordbox "Enter your password." \
         10 60 2> pass1
     dialog --no-cancel --passwordbox "Confirm your password." \
         10 60 2> pass2
@@ -76,13 +76,6 @@ dialog --title "Add user" \
     --msgbox "Let's create another user." \
     10 60 
 config_user
-
-if [ -z "$1" ]; then
-    dialog --no-cancel --inputbox "Please enter your user name." \
-        10 60 2> name
-else
-    echo "$1" > name
-fi
 
 echo "$name" > /tmp/user_name
 
