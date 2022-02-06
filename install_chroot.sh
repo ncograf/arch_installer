@@ -46,10 +46,10 @@ function config_user(){
     dialog --no-cancel --passwordbox "Confirm your password." \
         10 60 2> pass2
 
-    while [ "$(cat pass1)" != "$(cat pass2)" ]
+    while [ "$(cat pass1)" != "$(cat pass2)" || ! -s pass1 ]
     do
         dialog --no-cancel --passwordbox \
-            "The passwords do not match. \n\nEnter your password again." \
+            "The passwords do not match\n(empty passwords are not allowed either) \n\nEnter your password again." \
             10 60 2> pass1
         dialog --no-cancel --passwordbox \
             "Retype your password." \
