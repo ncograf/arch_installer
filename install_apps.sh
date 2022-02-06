@@ -71,7 +71,7 @@ done
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 
-curl https://raw.githubusercontent.com/grafn/arch_installer/master/install_user.sh \
+curl https://raw.githubusercontent.com/ncograf/arch_installer/master/install_user.sh \
 > /tmp/install_user.sh
 
 # Switch user and run the final script
