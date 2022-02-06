@@ -4,7 +4,7 @@ name=$(cat /tmp/user_name)
 
 apps_path="/tmp/apps.csv"
 curl https://raw.githubusercontent.com/ncograf\
-    /arch_installer/master/apps.csv > $apps_path
+/arch_installer/master/apps.csv > $apps_path
 
 dialog --title "Installation Script" \
     --msgbox "Script for apps and dotfiles" \
@@ -72,7 +72,7 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 
 curl https://raw.githubusercontent.com/grafn/arch_installer/master/installer_user.sh \
-    > /tmp/install_user.sh;
+> /tmp/install_user.sh
 
 # Switch user and run the final script
 sudo -u "$name" sh /tmp/install_user.sh
