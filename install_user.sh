@@ -3,7 +3,7 @@
 # mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
-localectl --no-convert -set-x11-keymap ch thinkpad de_nodeadkeys
+localectl --no-convert set-x11-keymap ch thinkpad de_nodeadkeys
 
 # makepkg options 
 # s -> synchronize depenedcies
