@@ -77,6 +77,21 @@ dialog --title "Add user" \
     10 60 
 config_user
 
+set_up_hardware()
+{
+    svn export https://github.com/ncograf/arch_installer/trunk/hardware_tools \
+        /usr/src/hardware_tools
+    echo "\n\n# Add access to hardware tools for the user" >> /etc/sudoers
+    echo "%wheel ALL=(root) NOPASSWD:/usr/src/hardware_tools/*.sh" >> /etc/sudoers
+
+}
+
+# grant the user access to the hardware tools of the thinkpad
+dialog --title "ThinkPad" --yesno \
+    "Is the machine a Thinkpad?" \
+    10 60 \
+    && set_up_hardware
+
 echo "$name" > /tmp/user_name
 
 dialog --title "Continue installation" --yesno \
