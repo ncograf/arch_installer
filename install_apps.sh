@@ -16,7 +16,7 @@ apps=("essential" "Essentials" on
     "tmux" "Tmux" on
     "notifier" "Notification tools" on 
     "git" "Git & git tools" on
-    "bspwm" "Bspwm" on
+    "bspwm" "Bspwm environment" on
     "zsh" "The Z-Shell (zsh)" on
     "neovim" "Neovim" on
     "urxvt" "URxvt" on

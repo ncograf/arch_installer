@@ -26,6 +26,10 @@ js, nodejs, Nodejs (for coc.vim)
 js, yarn, Dependency manager (for coc.vim )
 urxvt, rxvt-unicode, Terminal Urxvt
 urxvt, urxct-tabbedex-mina86-git, Imporved tabs for Urxvt (AUR)
+bspwm, bspwm, Window manager
+bspwm, polybar, statusbar for bspwm
+bspwm, sxhkd, hotkeybindings
+bspwm, rofi, programluncher and much more
 firefox, firefox, Browser firefox
 
 
