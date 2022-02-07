@@ -1,6 +1,6 @@
 # !/bin/bash
 
-sudo /home/nico/scripts/root_access/check_flightmode.sh
+sudo /usr/src/hardware_tools/check_flightmode.sh
 
 #if [  "$(bluetoothctl show | grep -e 'Powered: yes' | wc -l)" -eq 0 ] && [ "$(nmcli d status | grep -e ' wifi '*' verbunden ' | wc -l)" -eq 0 ]; then
 #	# if both ar off it makes no sence to leave them off

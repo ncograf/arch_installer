@@ -1,6 +1,6 @@
 # !/bin/bash
 
-sudo /home/nico/scripts/root_access/check_flightmode.sh
+sudo /usr/src/hardware_tools/check_flightmode.sh
 
 sudo rfkill unblock all
 
