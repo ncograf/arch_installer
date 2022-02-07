@@ -25,7 +25,3 @@ sudo /usr/src/hardware_tools/check_flightmode.sh
 sudo rfkill block all
 
 echo 1 > /etc/flightmode/mode
-
-# send signal to dwmblocks
-kill -54 $(pidof dwmblocks)
-kill -55 $(pidof dwmblocks)

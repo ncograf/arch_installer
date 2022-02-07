@@ -20,11 +20,8 @@ sudo rfkill unblock all
 #	echo "bluetooth on"
 #fi
 
-nmcli r wifi ou	
+nmcli r wifi on
 while [ "$(bluetoothctl power on)" == "No default controller available" ]; do sleep 1; done
 
 echo 0 > /etc/flightmode/mode
 
-# send siganl to dwm blocks
-kill -54 $(pidof dwmblocks)
-kill -55 $(pidof dwmblocks)
