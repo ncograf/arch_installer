@@ -3,6 +3,8 @@ essential, xorg-xinit, Display server boot
 essential, man, Manual
 essential, man-pages, Manual pages
 essential, pacman-contrib, Tools for pacman such as checkupdates
+essential, xsecurelock, Locking application
+essential, xss-lock, X-Lock screen saverX-Lock screen saver
 network, openssh, Remote login tool for SSH protocol
 network, networkmanager, Network manager
 tools, rsync, Synchronizing files across computers
