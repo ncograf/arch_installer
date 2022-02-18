@@ -21,7 +21,8 @@ apps=("essential" "Essentials" on
     "neovim" "Neovim" on
     "urxvt" "URxvt" on
     "firefox" "Firefox" on
-    "js" "JavaScript tooling" on)
+    "js" "JavaScript tooling" on
+    "code" "code tooling" on)
 
 dialog --checklist \
     "Select the option with SPACE and valid your choises with ENTER." \

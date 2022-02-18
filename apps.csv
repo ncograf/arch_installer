@@ -35,6 +35,7 @@ bspwm, polybar, statusbar for bspwm
 bspwm, sxhkd, hotkeybindings
 bspwm, rofi, programluncher and much more
 bspwm, ly, Display Manager
+code, clang, Clang compiler using llvm 
 firefox, firefox, Browser firefox
 
 

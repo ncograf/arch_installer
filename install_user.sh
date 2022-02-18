@@ -52,7 +52,7 @@ if [ ! -d "$DOTFiLES" ]; then
 fi
 
 source "$DOTFILES/zsh/.zshenv"
-cd "$DOTFILES" && bash install.sh
+cd "$DOTFILES" # && bash install.sh
 
 
 
