@@ -31,7 +31,10 @@ timedatectl set-timezone "Europe/Zurich"
 
 echo "de_CH.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
-echo "LANG=de_CH.UTF-8 UTF-8" > /etc/locale.conf
+echo "LANG=de_CH.UTF-8" > /etc/locale.conf
+
+localectl --no-convert set-x11-keymap ch thinkpad de_nodeadkeys
+
 
 function config_user(){
     if [ -z "$1" ]; then
@@ -79,8 +82,8 @@ config_user
 
 set_up_hardware()
 {
-    svn export https://github.com/ncograf/arch_installer/trunk/hardware_tools \
-        /usr/src/hardware_tools
+    pacman --noconfirm --needed -S svn
+    svn export https://github.com/ncograf/arch_installer/trunk/hardware_tools /usr/src/hardware_tools
     echo "\n\n# Add access to hardware tools for the user" >> /etc/sudoers
     echo "%wheel ALL=(root) NOPASSWD:/usr/src/hardware_tools/*.sh" >> /etc/sudoers
 
@@ -100,6 +103,9 @@ dialog --title "Continue installation" --yesno \
 && curl https://raw.githubusercontent.com/ncograf\
 /arch_installer/master/install_apps.sh > /tmp/install_apps.sh \
 && bash /tmp/install_apps.sh
+
+
+
 
 
 

@@ -3,8 +3,6 @@
 # mkdir -p "/home/$(whoami)/Documents"
 mkdir -p "/home/$(whoami)/Downloads"
 
-localectl --no-convert set-x11-keymap ch thinkpad de_nodeadkeys
-
 # makepkg options 
 # s -> synchronize depenedcies
 # i -> install with pacman afterwards
@@ -52,7 +50,7 @@ if [ ! -d "$DOTFiLES" ]; then
 fi
 
 source "$DOTFILES/zsh/.zshenv"
-cd "$DOTFILES" # && bash install.sh
+cd "$DOTFILES" && bash install.sh
 
 
 
