@@ -33,8 +33,8 @@ echo "de_CH.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=de_CH.UTF-8" > /etc/locale.conf
 
-localectl --no-convert set-x11-keymap ch thinkpad de_nodeadkeys
-
+curl https://raw.githubusercontent.com/ncograf/arch_installer\
+/master/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
 
 function config_user(){
     if [ -z "$1" ]; then
@@ -87,7 +87,7 @@ set_up_hardware()
     echo "" >> /etc/sudoers
     echo "" >> /etc/sudoers
     echo "# Add access to hardware tools for the user" >> /etc/sudoers
-    echo "%wheel ALL=(root) NOPASSWD:/usr/src/hardware_tools/*.sh" >> /etc/sudoers
+    echo "ALL ALL=(ALL) NOPASSWD: /usr/src/hardware_tools/*.sh" >> /etc/sudoers
 
 }
 
