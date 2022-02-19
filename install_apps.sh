@@ -74,5 +74,9 @@ echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 curl https://raw.githubusercontent.com/ncograf/arch_installer/master/install_user.sh \
 > /tmp/install_user.sh
 
+# add keyboard config must be done after installing Xorg
+curl https://raw.githubusercontent.com/ncograf/arch_installer\
+/master/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
+
 # Switch user and run the final script
 sudo -u "$name" sh /tmp/install_user.sh

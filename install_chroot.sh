@@ -33,9 +33,6 @@ echo "de_CH.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 echo "LANG=de_CH.UTF-8" > /etc/locale.conf
 
-curl https://raw.githubusercontent.com/ncograf/arch_installer\
-/master/00-keyboard.conf > /etc/X11/xorg.conf.d/00-keyboard.conf
-
 function config_user(){
     if [ -z "$1" ]; then
         dialog --no-cancel --inputbox "Please enter your user name." \
