@@ -84,7 +84,9 @@ set_up_hardware()
 {
     pacman --noconfirm --needed -S svn
     svn export https://github.com/ncograf/arch_installer/trunk/hardware_tools /usr/src/hardware_tools
-    echo "\n\n# Add access to hardware tools for the user" >> /etc/sudoers
+    echo "" >> /etc/sudoers
+    echo "" >> /etc/sudoers
+    echo "# Add access to hardware tools for the user" >> /etc/sudoers
     echo "%wheel ALL=(root) NOPASSWD:/usr/src/hardware_tools/*.sh" >> /etc/sudoers
 
 }

@@ -19,6 +19,9 @@ tools, ripgrep, Faster alternative to grep
 tools, htop, Interactive process viewer
 tools, ranger, File Manager
 tools, svn, alternative to git but used for setup
+tools, pywal-git, pywal color manager
+tools, feh, image viewer
+tools, keychain, keychain for ssh
 tmux, tmux, Terminal Multiplexer
 tmux, tmuxp, Configure tmux session + windows + panes via config files
 git, git, Version control system
