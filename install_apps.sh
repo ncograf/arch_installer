@@ -29,6 +29,7 @@ dialog --checklist \
     0 0 0 \
     "${apps[@]}" 2> app_choices
 
+neovim=$(cat app_choices | grep neovim | wc -l)
 choices=$(cat app_choices) && rm app_choices
 
 selection="^$(echo $choices | sed -e 's/ /,|^/g'),"
@@ -69,7 +70,30 @@ echo "$packages" | while read -r line; do
     fi
 done
 
+# try to install pynvim with pip if neovim was selected
+if [ "$neovim" -ne "0" ]; then
+    python2 -m ensurepip
+    python2 -m pip install pynvim
+fi
+
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+
+set_up_hardware()
+{
+    pacman --noconfirm --needed -S svn
+    svn export https://github.com/ncograf/arch_installer/trunk/hardware_tools /usr/src/hardware_tools
+    echo "" >> /etc/sudoers
+    echo "" >> /etc/sudoers
+    echo "# Add access to hardware tools for the user" >> /etc/sudoers
+    echo "ALL ALL=(ALL) NOPASSWD: /usr/src/hardware_tools/*.sh" >> /etc/sudoers
+
+}
+
+# grant the user access to the hardware tools of the thinkpad
+dialog --title "ThinkPad" --yesno \
+    "Is the machine a Thinkpad?" \
+    10 60 \
+    && set_up_hardware
 
 curl https://raw.githubusercontent.com/ncograf/arch_installer/master/install_user.sh \
 > /tmp/install_user.sh
