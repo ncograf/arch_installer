@@ -7,6 +7,7 @@ sudo rfkill unblock all
 bluetoothctl power on
 
 # mark in flightmode control
+mkdir -p /etc/flightmode
 echo 1 >/etc/flightmode/bluetooth_mode
 
 # start wifi

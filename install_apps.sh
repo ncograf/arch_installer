@@ -71,9 +71,6 @@ done
 
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
-# set display manager ly will simply fail if ly is not installed
-systemctl enable ly.service 2> /dev/null > /dev/null
-
 curl https://raw.githubusercontent.com/ncograf/arch_installer/master/install_user.sh \
 > /tmp/install_user.sh
 
