@@ -12,6 +12,7 @@ essential, bluez, bluetooth
 essential, bluez-utils, bluetooth utils
 network, openssh, Remote login tool for SSH protocol
 network, networkmanager, Network manager
+network, networkmanager-openconnect, Network manager openconnect extension
 tools, rsync, Synchronizing files across computers
 tools, xsel, Manipulate the X selection
 tools, fzf, Command line fuzzy finder
@@ -24,6 +25,7 @@ tools, svn, alternative to git but used for setup
 tools, pywal-git, pywal color manager
 tools, feh, image viewer
 tools, keychain, keychain for ssh
+tools, zoom, zoom 
 tmux, tmux, Terminal Multiplexer
 tmux, tmuxp, Configure tmux session + windows + panes via config files
 git, git, Version control system
@@ -39,12 +41,16 @@ js, nodejs, Nodejs (for coc.vim)
 js, yarn, Dependency manager (for coc.vim )
 urxvt, rxvt-unicode, Terminal Urxvt
 urxvt, urxct-tabbedex-mina86-git, Imporved tabs for Urxvt (AUR)
+urxvt, urxvt-resize-font-git, Font resize with key combo
 bspwm, bspwm, Window manager
 bspwm, polybar, statusbar for bspwm
 bspwm, sxhkd, hotkeybindings
 bspwm, rofi, programluncher and much more
 bspwm, ly, Display Manager
 code, clang, Clang compiler using llvm 
+code, vscode, usefull debugger
+code, r, R language 
 firefox, firefox, Browser firefox
+
 
 

@@ -70,6 +70,7 @@ echo "$packages" | while read -r line; do
     fi
 done
 
+# TODO fix to work properly doesn't seem to do so
 # try to install pynvim with pip if neovim was selected
 if [ "$neovim" -ne "0" ]; then
     python2 -m ensurepip
